@@ -1,4 +1,18 @@
-# Angtest
+# Explanation
+We try to use good practices, separate components into elements, use Input and Output to communicate between them instead of having everything in one lump.
+<br>
+- Main component only hosts app subcomponents
+- Search result cycles through search item elements
+- Split call elements into components for reusability
+
+# TODO onward
+- Use a centralised object for the found items, so they can be accessed and used more easily. This includes infinite scroll, saving position, items per result set etc
+- Implement on-key search with delay, over submit button, for better UX
+- Add validators for input, min length before setting of on-key
+- Learn more on Angular 13
+- Learn how to lorem ipsum documentation
+
+## Angtest
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
 
@@ -25,3 +39,4 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+

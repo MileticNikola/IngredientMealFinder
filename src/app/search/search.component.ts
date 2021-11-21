@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {FormGroup, FormControl, FormBuilder} from "@angular/forms";
+import {FormGroup, FormBuilder} from "@angular/forms";
 
 @Component({
   selector: 'app-search',
@@ -9,7 +9,6 @@ import {FormGroup, FormControl, FormBuilder} from "@angular/forms";
 
 export class SearchComponent implements OnInit {
 
-  message:string = "test1";
   foodForm!: FormGroup;
 
   @Output() messageEvent = new EventEmitter<string>();
