@@ -1,0 +1,6 @@
+<form class="col-12 col-lg-auto" [formGroup]="foodForm" (ngSubmit)="onSubmit()">
+  <div class="input-group">
+    <input formControlName="ingredient" type="text" class="form-control form-control-dark" placeholder="I have in my fridge...">
+    <button type="submit" class="btn btn-primary">Search</button>
+  </div>
+</form>

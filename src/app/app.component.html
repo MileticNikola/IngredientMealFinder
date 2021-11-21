@@ -1,0 +1,6 @@
+<div class="container">
+  <app-header></app-header>
+  <app-search (messageEvent)="receiveMessage($event)"></app-search>
+  <app-results-listing [resultList]="menu"></app-results-listing>
+  <app-footer></app-footer>
+</div>

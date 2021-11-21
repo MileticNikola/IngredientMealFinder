@@ -1,0 +1,10 @@
+form{
+  padding: 15px 0;
+  margin: 15px 0;
+}
+input{
+  padding: 20px;
+}
+.form-control,.btn{
+  border-radius: 0;
+}

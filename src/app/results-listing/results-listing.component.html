@@ -1,0 +1,10 @@
+<div class="search-results-container"
+     infinite-scroll
+     (scrolled)="onScrollDown()"
+     (scrolledUp)="onScrollUp()">
+
+  <div class="list-group">
+    <app-result-item *ngFor="let resultItem of resultList" text="{{ resultItem.strMeal }}" image="{{ resultItem.strMealThumb }}"></app-result-item>
+  </div>
+
+</div>
