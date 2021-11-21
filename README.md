@@ -1,16 +1,16 @@
-# Explanation
-We try to use good practices, separate components into elements, use Input and Output to communicate between them instead of having everything in one lump.
-<br>
-- Main component only hosts app subcomponents
-- Search result cycles through search item elements
-- Split call elements into components for reusability
+# Routing
+- Search form emits an event with the input when submitted.
+- The main component listens for the event and fetches results via http get.
+- If we have results, we populate a result list function.
+- The result list function is used to loop in the result listing component, calling individual result item components and setting their properties.
 
-# TODO onward
-- Use a centralised object for the found items, so they can be accessed and used more easily. This includes infinite scroll, saving position, items per result set etc
-- Implement on-key search with delay, over submit button, for better UX
-- Add validators for input, min length before setting of on-key
-- Learn more on Angular 13
-- Learn how to lorem ipsum documentation
+## TODO onward
+- A lot of if checks...
+- Use a centralised object for the found items, so they can be accessed and used more easily. This includes infinite scroll, saving position, items per result set etc.
+- Implement on-key search with delay, over submit button, for better UX.
+- Add validators for input, min length before setting of on-key.
+- Learn more on Angular 13.
+- Learn how to better lorem ipsum documentation.
 
 ## Angtest
 
