@@ -1,3 +1,7 @@
+# Usage
+Type an ingredient in the search and submit. API only accepts full words.<br/>
+Try 'Onion' as string and keep console open.
+
 # Routing
 - Search form emits an event with the input when submitted.
 - The main component listens for the event and fetches results via http get.

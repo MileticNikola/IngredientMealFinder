@@ -1,6 +1,6 @@
 <div class="container">
   <app-header></app-header>
   <app-search (messageEvent)="receiveMessage($event)"></app-search>
-  <app-results-listing [resultList]="menu"></app-results-listing>
+  <app-results-listing [resultList]="menu" (scrollEvent)="startingItem()"></app-results-listing>
   <app-footer></app-footer>
 </div>

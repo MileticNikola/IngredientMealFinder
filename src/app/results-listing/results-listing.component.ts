@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-results-listing',
@@ -8,6 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class ResultsListingComponent implements OnInit {
 
   @Input() resultList: any;
+  @Output() scrollEvent = new EventEmitter<string>();
 
   constructor() {
   }
@@ -18,7 +19,7 @@ export class ResultsListingComponent implements OnInit {
 
   onScrollDown() {
     console.log("down");
-    //TODO load more results
+    this.scrollEvent.emit();
   }
   onScrollUp() {
     console.log("up");

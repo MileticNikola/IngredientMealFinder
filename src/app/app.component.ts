@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import { HttpClient} from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: 'app-root',
@@ -13,13 +13,17 @@ export class AppComponent{
   data = null;
   message!: string;
   menu = null;
-  startingItem: number = 0;
+  startingItemNum: number = 0;
   maxItemsPerView: number = 10;
 
   constructor(private http:HttpClient){
 
   }
 
+  startingItem(){
+    this.startingItemNum+=10;
+    this.receiveMessage(this.message);
+  }
   receiveMessage($event:any){
     this.message = $event;
     this.http.get(this.apiUrlBase+this.apiFilterByMainIngredient+this.message).toPromise().then( data => {
@@ -28,8 +32,11 @@ export class AppComponent{
   }
   resultList(data:any){
     if(data != null){
-      console.log(data.meals);
-      return data.meals;
+      console.log("total meals: "+data.meals.length);
+      console.log("loaded meals:");
+      console.log(data.meals.slice(0,this.maxItemsPerView));
+      this.maxItemsPerView+=this.startingItemNum;
+      return data.meals.slice(0,this.maxItemsPerView); //fakes receiving pages via api
     }
   }
 
